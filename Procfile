@@ -1,1 +1,1 @@
-web: python auto.py
+web: python main.py
