@@ -17,7 +17,6 @@ idna==2.2
 ipaddress==1.0.18
 jsondatabase==0.1.7
 motor==1.1
-nltk==3.2.2
 olefile==0.44
 pillow==4.0.0
 pony==0.7
