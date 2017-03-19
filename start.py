@@ -6,7 +6,7 @@ from tornado.options import define, options
 
 from bota import respond
 
-define("port", default=8000, help="run on the given port", type=int)
+define("port", default=8888, help="run on the given port", type=int)
 class IndexHandler(tornado.web.RequestHandler):
  def get(self):
  	query = self.get_argument('query','no')
