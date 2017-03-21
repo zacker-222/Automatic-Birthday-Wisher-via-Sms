@@ -8,17 +8,24 @@ from tornado.options import define, options
 from bota import respond
 port = int(os.environ.get("PORT", 5000))
 
-class IndexHandler(tornado.web.RequestHandler):
- def get(self):
- 	query = self.get_argument('query')
- 	reply = respond(query)
- 	
- 	self.write(str(reply))
- 	
       
+
+
+ 
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+    	query = self.get_argument('query')
+    	reply =respond(query)
+        self.write("Hello world "+reply)
+ 
+def main():
+    application = tornado.web.Application([
+        (r"/", MainHandler),
+    ])
+    http_server = tornado.httpserver.HTTPServer(application)
+    port = int(os.environ.get("PORT", 5000))
+    http_server.listen(port)
+    tornado.ioloop.IOLoop.instance().start()
+ 
 if __name__ == "__main__":
- tornado.options.parse_command_line()
- app = tornado.web.Application(handlers=[(r"/", IndexHandler)],debug = True)
- http_server = tornado.httpserver.HTTPServer(app)
- http_server.listen(options.port)
- tornado.ioloop.IOLoop.instance().start()
+    main()
