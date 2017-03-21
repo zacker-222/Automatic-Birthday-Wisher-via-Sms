@@ -11,7 +11,7 @@ class IndexHandler(tornado.web.RequestHandler):
  def get(self):
  	query = self.get_argument('query')
  	reply = respond(query)
- 	print reply
+ 	
  	self.write(str(reply))
  	
       
