@@ -2,11 +2,12 @@ import tornado.httpserver
 import tornado.ioloop
 import tornado.options
 import tornado.web
+import os
 from tornado.options import define, options
 
 from bota import respond
+port = int(os.environ.get("PORT", 5000))
 
-define("port", default=8036, help="run on the given port", type=int)
 class IndexHandler(tornado.web.RequestHandler):
  def get(self):
  	query = self.get_argument('query')
