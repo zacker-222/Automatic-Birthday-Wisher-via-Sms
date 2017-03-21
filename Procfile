@@ -1,1 +1,1 @@
-web: (python -m http.server $PORT &) && (python margo/start.py)
+web: (python -m http.server $PORT &) && (python start.py)
