@@ -14,8 +14,8 @@ port = int(os.environ.get("PORT", 5000))
  
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-    	
-        self.write("Hello world ")
+    	r=respond(5)
+        self.write("Hello world "+str(r))
  
 def main():
     application = tornado.web.Application([
