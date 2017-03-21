@@ -1,5 +1,5 @@
 def respond(n):
-	f=406000000
+	f=5
 	mod=1000000000
 	p=1
 	for i in range(f):
