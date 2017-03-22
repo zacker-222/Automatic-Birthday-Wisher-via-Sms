@@ -6,7 +6,7 @@ today=str(datetime.today()).split()[0]
 cur_year,cur_mon,cur_date=today.split('-')
 while True:
 	data=fi.readline().strip()
-	print data
+	
 	if data=="end":
 		break
 	date,month,name,number=data.split(',')
@@ -18,4 +18,4 @@ while True:
 		wr.write(cur_year)
 		wr.close()
 
-print "done"
+fi.close()
