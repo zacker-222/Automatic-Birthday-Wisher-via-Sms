@@ -34,5 +34,3 @@ def msg(username, passwd, message, number):
     except IOError:
         return msg(username, passwd, message, number)
 
-    
-print msg('9409213105','asdfgh','\nZacker','9409213105')
