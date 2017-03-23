@@ -27,16 +27,13 @@ while True:
 
 		date,month,name,number=data.split(',')
 		List=done()	
-		if date==cur_date and month==cur_mon:
+		if int(date)==int(cur_date) and int(month)==int(cur_mon):
 			if [cur_year,cur_mon,cur_date,name] not in List:
 				
-				if str(number) =='9409213105':
-					print 'het'
-					time.sleep(5)
-				print  msg('9409213105','asdfgh','Happy Birthday',str(number))
+				print  msg('9409213105','asdfgh','Happy Birthday ',str(number))
 				
 				time.sleep(10)
 				with open("dont.txt","a+") as wr:
 					wr.write(cur_year+","+cur_mon+","+cur_date+","+name)
 				
-			
+	time.sleep(60*4)	
