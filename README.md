@@ -1,3 +1,3 @@
-# whatsapp-autoreply
-Auto reply using whatsapp web and selenium
-The Chatbot is used to generate the replies.
+# Automatic-Birthday-Wisher-via-Sms
+Automatically send wished to your friends using way2sms.
+Deploy Your Script to heroku to keep it running.
