@@ -32,5 +32,5 @@ def msg(username, passwd, message, number):
         sms_sent_page = opener.open(send_sms_url,send_sms_data)
         return "SMS has been sent."
     except IOError:
-        return msg(username, passwd, message, number)
+        return "no"
 
