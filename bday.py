@@ -36,4 +36,4 @@ while True:
 				with open("dont.txt","a+") as wr:
 					wr.write(cur_year+","+cur_mon+","+cur_date+","+name)
 				
-	time.sleep(60*4)	
+	time.sleep(60*60*24)	
